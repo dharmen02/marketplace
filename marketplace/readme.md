@@ -33,27 +33,5 @@ States 
 Workflow Details
 ----------------
 
-![workflow details for application](https://raw.githubusercontent.com/truffle-box/azure-simple-marketplace-box/master/media/a98d6da0441c39cf0e2d82b2f4faaff3.png)
 
-An instance of the Simple Marketplace application's workflow starts in the
-ItemAvailable state when an Owner makes an item available for sale by specifying
-its description and price.  A buyer can then make an offer by specifying their
-price for the item.  This action causes the state to change from ItemAvailable
-to OfferPlaced.  Now, if the owner agrees to the buyer's offer, then owner calls
-the function to accept an offer, and the workflow reaches a successful
-conclusion state denoted by the Accepted state.  If the owner, however, is not
-satisfied with the offer, then the owner can call the function to reject the
-offer.  On rejection, the state changes to ItemAvailable indicating that the
-item is still up for sale.  The transitions between the ItemAvailable and the
-OfferPlaced states can continue until the owner is satisfied with the offer
-made. 
 
-A happy path shown in the transition diagram traces an owner making an item
-available, a buyer making an offer, and the owner accepting the offer. 
-
-<br />
-
-Application Files
------------------
-
-[SimpleMarketplace.sol](https://raw.githubusercontent.com/truffle-box/azure-simple-marketplace-box/master/contracts/SimpleMarketplace.sol)
